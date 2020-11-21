@@ -15,13 +15,15 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
     Subject: An identifier of the subject who carried out the experiment  
     Activity: Activity label, out of set: 
     
-        * STANDING
-        * SITTING
-        * LAYING
-        * WALKING
-        * WALKING_DOWNSTAIRS
-        * WALKING_UPSTAIRS
+        STANDING
+        SITTING
+        LAYING
+        WALKING
+        WALKING_DOWNSTAIRS
+        WALKING_UPSTAIRS
+          
     Features (66):
+    
         Feature variables reflect mean and standard deviations (std) for these features:
         (details see file "features_info.txt" in the original data set)
         tBodyAcc-XYZ
