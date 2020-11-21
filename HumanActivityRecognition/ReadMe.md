@@ -1,11 +1,13 @@
 # READ ME
-Human Activity Recognition Using Smartphones Dataset
-Transformation of originanl data set by Rolf Widmer
-for original data sources see www.smartlab.ws
-https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+## Reference
+Human Activity Recognition Using Smartphones Dataset  
+Transformation of originanl data set by Rolf Widmer  
+for original data sources see www.smartlab.ws  
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip  
 
-# SCRIPTS
-## run_analysis.R: reads original training and test data sets and transforms them as follows:
+## SCRIPTS
+### run_analysis.R: 
+reads original training and test data sets and transforms them as follows:  
 
 1. Reads the training and the test sets to create one data set.
 2. Extracts only the measurements on the mean and standard deviation for each measurement.
