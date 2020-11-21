@@ -7,15 +7,15 @@ n <- 561
 #------------------------------------------------------------------------------------------------
 
 # test set 
-test <- data.frame(matrix(data=scan("HumanActivityRecognition/test/X_test.txt"), ncol=n))
-train <- data.frame(matrix(data=scan("HumanActivityRecognition/train/X_train.txt"), ncol=n))
+test <- data.frame(matrix(data=scan("test/X_test.txt"), ncol=n))
+train <- data.frame(matrix(data=scan("train/X_train.txt"), ncol=n))
 x <- rbind(test, train)
 
 #------------------------------------------------------------------------------------------------
 # task 2: Extracts only the measurements on the mean and standard deviation for each measurement
 #------------------------------------------------------------------------------------------------
 # Read features
-features <- read.csv("HumanActivityRecognition/features.txt", sep=" ", header=F)
+features <- read.csv("features.txt", sep=" ", header=F)
 colnames(features) <- c("ID", "Feature")
 
 # filter
@@ -25,10 +25,10 @@ x <- x[, selectedFeatures]
 #------------------------------------------------------------------------------------------------
 # task 3: Uses descriptive activity names to name the activities in the data set
 #------------------------------------------------------------------------------------------------
-labels <- rbind(read.csv("HumanActivityRecognition/test/Y_test.txt", sep=" ", header=F), read.csv("HumanActivityRecognition/train/Y_train.txt", sep=" ", header=F))
+labels <- rbind(read.csv("test/Y_test.txt", sep=" ", header=F), read.csv("train/Y_train.txt", sep=" ", header=F))
 colnames(labels) <- "ID"
 
-activities <- read.csv("HumanActivityRecognition/activity_labels.txt", sep=" ", header=F)
+activities <- read.csv("activity_labels.txt", sep=" ", header=F)
 colnames(activities) <- c("ID", "Activity")
 
 trans <- activities$Activity
@@ -46,7 +46,7 @@ colnames(x) <- c("Activity", as.character(features[selectedFeatures, "Feature"])
 # task 5: creates independent tidy data set with the average of each variable for each activity and each subject.
 #------------------------------------------------------------------------------------------------
 # read subjects
-subjects <- rbind(read.csv("HumanActivityRecognition/test/subject_test.txt", header=F), read.csv("HumanActivityRecognition/train/subject_train.txt", header=F))
+subjects <- rbind(read.csv("test/subject_test.txt", header=F), read.csv("train/subject_train.txt", header=F))
 x <- cbind(subjects, x)
 colnames(x)[1] <- "Subject"
 
@@ -57,8 +57,8 @@ y <- group_by(x, Subject, Activity) %>%
 #------------------------------------------------------------------------------------------------
 # Save files
 #------------------------------------------------------------------------------------------------
-write.csv(x, "HumanActivityRecognition/dataset1.csv")
-write.csv(y, "HumanActivityRecognition/dataset2.csv")
+write.table(x, "DataSet1.txt", row.name=FALSE)
+write.table(y, "DataSet2.txt", row.name=FALSE)
 
 #------------------------------------------------------------------------------------------------
 # Housekeeping
