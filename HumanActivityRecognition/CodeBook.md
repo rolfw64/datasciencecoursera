@@ -1,8 +1,8 @@
 
 ## Summary
-Human Activity Recognition Using Smartphones Dataset
-Transformation of originanl data set by Rolf Widmer
-for original data sources see www.smartlab.ws
+Human Activity Recognition Using Smartphones Dataset  
+Transformation of originanl data set by Rolf Widmer  
+for original data sources see www.smartlab.ws  
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 
