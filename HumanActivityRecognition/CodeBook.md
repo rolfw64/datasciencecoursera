@@ -11,9 +11,10 @@ Rows:
     Each row represents a measurement; measurements are taken from both training and 
     test data sets.
 
-Variables:
+### Variables:
     Subject: An identifier of the subject who carried out the experiment  
     Activity: Activity label, out of set: 
+    
         * STANDING
         * SITTING
         * LAYING
